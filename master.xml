@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="mastersuite">
+	<listeners>
+		<listener class-name="utilities.ExtentReportManager"/>
+	</listeners>
+	
+  <test name="mastertest">
+	
+	<parameter name="os" value="windows"/>
+	<parameter name="browser" value="chrome"/>
+	
+    <classes>
+     <class name="testcases.TC_001AccountRegistrationTest"/>
+      <class name="testcases.TC_002VerifyLoginWithValidCredentials"/> 
+     
+       <!--<class name="testcases.TC_003VerifyLoginWithInvalidCredentials"/> -->
+    </classes>
+    
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
